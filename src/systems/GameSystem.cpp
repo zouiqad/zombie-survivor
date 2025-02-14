@@ -110,12 +110,12 @@ void GameSystem::NextTurn() {
 }
 
 void GameSystem::CheckWinCondition() {
-    if(gMediator.GetEntitiesWithComponent<Survivor>().size() - 1 >= mNumTotalSurvivors + mNumTotalZombies) {
-        Log("Simulation finished, Surviors WIN!");
+    if(gMediator.GetEntitiesWithComponent<Survivor>().empty()) {
+        Log("Simulation finished, Zombies WIN!");
         Config::GetInstance().simulationFinished = true;
     }
-    else if(gMediator.GetEntitiesWithComponent<Zombie>().size() - 1 >= mNumTotalSurvivors + mNumTotalZombies) {
-        Log("Simulation finished, Zombies WIN!");
+    else if(gMediator.GetEntitiesWithComponent<Zombie>().empty()) {
+        Log("Simulation finished, Survivors WIN!");
         Config::GetInstance().simulationFinished = true;
     }
 }

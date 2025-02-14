@@ -12,6 +12,6 @@ struct Survivor {
     int movementPoints;
     int goalX = 0;
     int goalY = 0;
-    bool isInfected;
+    bool isInfected = false;
     int infectionCountDown = 0;
 };

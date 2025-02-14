@@ -61,11 +61,11 @@ void GUIManager::DrawParams() {
             ImGui::SliderInt("Runner Steps", &Config::GetInstance().runnerZombieSteps, 0, 10);
 
             ImGui::SeparatorText("Survivor params");
-            ImGui::SliderInt("Military Survivor - ", &Config::GetInstance().militarySurvivorRange, 0.0f, 10.0f);
+            ImGui::SliderInt("Military Survivor Range", &Config::GetInstance().militarySurvivorRange, 0.0f, 10.0f);
             ImGui::SliderInt("Survivor infection speed (Number of turns)", &Config::GetInstance().infectionSpeed, 1, 10);
 
             ImGui::SeparatorText("Misc params");
-            ImGui::SliderFloat("Turn Speed (s)", &Config::GetInstance().turnDuration, 2.0f, 10.0f);
+            ImGui::SliderFloat("Turn Speed (seconds)", &Config::GetInstance().turnDuration, 0.1f, 10.0f);
         }
 
 
